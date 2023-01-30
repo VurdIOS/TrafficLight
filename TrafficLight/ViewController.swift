@@ -13,23 +13,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var yellowLightView: UIView!
     @IBOutlet weak var greenLightView: UIView!
     
-    
     @IBOutlet weak var startButton: UIButton!
     
     
-    private let lightsCornerRadius: CGFloat = 50
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redLightView.layer.cornerRadius = lightsCornerRadius
-        yellowLightView.layer.cornerRadius = lightsCornerRadius
-        greenLightView.layer.cornerRadius = lightsCornerRadius
+        redLightView.layer.cornerRadius = redLightView.frame.width / 2
+        yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2
+        greenLightView.layer.cornerRadius = greenLightView.frame.width / 2
         startButton.layer.cornerRadius = 8
         
     }
 
     @IBAction func startButtonTapped(_ sender: UIButton) {
+        startButton.setTitle("NEXT", for: .normal)
+        redLightView.alpha = 1
+        
     }
     
 }
