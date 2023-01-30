@@ -17,16 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6a-Tc-tR8">
-                                <rect key="frame" x="85" y="438" width="150" height="36"/>
+                                <rect key="frame" x="60" y="429" width="200" height="45"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="aUF-UJ-I90"/>
+                                    <constraint firstAttribute="height" constant="45" id="7Ct-dg-pcs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="rps-1L-JD5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" systemColor="systemCyanColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ziz-YF-WZ4"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="fit-Kt-3Gw">
                                 <rect key="frame" x="110" y="20" width="100" height="334"/>
@@ -59,10 +63,16 @@
                             <constraint firstItem="x6a-Tc-tR8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zur-Ns-CWt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="gdW-W1-tYe" id="TMJ-Tu-h2f"/>
+                        <outlet property="redLightView" destination="j2d-65-YAE" id="EKp-F0-whc"/>
+                        <outlet property="startButton" destination="x6a-Tc-tR8" id="r4T-1x-3gT"/>
+                        <outlet property="yellowLightView" destination="UIq-hc-uo4" id="I9X-be-Vg7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="56"/>
+            <point key="canvasLocation" x="262.5" y="55.985915492957744"/>
         </scene>
     </scenes>
     <resources>
